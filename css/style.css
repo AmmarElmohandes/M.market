@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+/* home html style */
+body{
+font-family: 'Oleo Script', cursive;
+
+}
+.body-about{
+    background-image: url("./images/background2.jpg");
+}
+/* header */
+.header{
+    padding: 1% 10%;
+    
+}
+.navbar{
+    padding:0 0 4.5rem;
+}
+.nav-item{
+    padding:0 18px;
+}
+.nav-link{
+    
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+.navbar-brand{
+
+font-weight: bold;
+font-size: 2.5rem;
+
+
+}
+/* cards */
+.cards-section{
+    padding-top: 5%;
+   
+}
+.header-card{
+ color: dimgray;   
+}
+
+.bodyOfCard{
+    background-color: transparent;
+}
+.img-card{
+    height: 70%;
+    width: 50%;
+}
+.cart{
+    
+    margin-left: 90%;
+}
+.price{
+    margin-left: 85%;
+}
+
+/* contact us html style */
+
+.inquiries{
+    text-align: center;
+    padding-top: 7%;
+    padding-left: 20%;
+    width: 80%;
+    font-family: 'Pacifico', cursive;
+    font-size: 5rem;
+    color: #ff4c68;
+}
+/* form */
+form{
+    padding: 7% 15%;
+}    
+
+.form-group{
+    margin-bottom:  2%;
+    margin-left: 20%;
+    width:60%;
+
+}
+.btn-message{
+    margin-left: 20%;
+
+}
+.about-us{
+    text-align: center;
+    color: white;
+    padding: 7% 15%;
+    font-size: 2rem;
+}
+/* product page */
+
+.product-section{
+padding: 7% 10%;
+font-size: 2rem;
+}
+#right{
+    padding: 5% 5%;
+}
+.product-price{
+    color: blue;
+    font-size: 2rem;
+}
+.availability{
+    color:lightslategray;
+    font-size: 1rem;
+    
+}
+.quantity{
+    padding-right: 50%;
+}
+.product-name{
+    font-weight: bold;
+    color:#ff4c68 ;
+}
+.product-description{
+    color: lightslategray;
+    font-size: 1.5rem;
+    
+}
+.left{
+    padding-top: 10%;
+}

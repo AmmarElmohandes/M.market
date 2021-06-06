@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./css/style.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link href="./css/all.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oleo+Script&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./css/images/favicon.ico">
+
+    <title>M.market</title>
+  </head>
+  <body>
+    <div class="header bg-secondary">
+        <div class="container">
+          <header class="d-flex justify-content-center py-3">
+            <a href="home.html"><img  src="./css/images/favicon-32x32 (1).png" ></a>
+
+            <ul class="nav nav-pills ">
+              <li class="nav-item" id="l">
+                <a href="home.html" class="nav-link text-light" aria-current="page">Home</a>
+              </li>
+              <li class="nav-item"><a href="#" class="nav-link text-light">About</a></li>
+              <li class="nav-item">
+                <a href="contactus.html" class="nav-link text-light">Contact Us</a>
+              </li>
+            </ul>
+          </header>
+        </div>
+      </div>
+      <div class="leave-messsage">
+          <p class="inquiries">if you have any inquries leave a message </p>
+      </div>
+      <div class="message-form">
+        <form id="contact-form">
+            <div class="form-group">               
+                <label for="Name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Name">
+              </div>
+            <div class="form-group">               
+              <label for="Email">Email address</label>
+              <input type="email" class="form-control " id="email" placeholder="name@example.com">
+            </div>
+            <div class="form-group">
+                <label for="Subject">subject</label>
+                <input type="text" class="form-control " id="subject" placeholder="subject">
+              </div>
+              <div class="form-group">
+                <label for="Message"> Message</label>
+                <textarea class="form-control " id="message" rows="3"></textarea>
+              </div>
+              <button type="submit" class="btn btn-secondary btn-message">Submit</button>
+
+            </form>
+
+      </div>
+      <script src="./script-contact.js"></script>
+  </body>
+</html>
