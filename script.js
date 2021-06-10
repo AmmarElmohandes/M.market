@@ -2,6 +2,7 @@ const ProductApi =
   "https://afternoon-falls-30227.herokuapp.com/api/v1/products/";
 const Api = "https://afternoon-falls-30227.herokuapp.com/api/v1/products/";
 
+let index=0;// this index is used to give name to the local storage to retreive the right data
 //getting data from api
 const xhr = new XMLHttpRequest();
 xhr.open("Get", ProductApi);
@@ -9,6 +10,7 @@ xhr.send();
 xhr.onload = function () {
   if (xhr.status == 200) {
     const product = JSON.parse(xhr.response).data;
+    window.localStorage.setItem('user',JSON.stringify(product));
     console.log(product);
 
     let cards = ``;
@@ -16,12 +18,12 @@ xhr.onload = function () {
 //adding card html elements to the home.html page
     product.forEach((products) => {
       cards += `
-<div class="col-lg-4 col-md-6" id="${count}" onclick="{clickHandler(this)}">
+<div class="col-lg-4 col-md-6"  >
   <div class="card mb-4 rounded-3 shadow-sm">
     <div class="card-header py-3 bg-secondary text-white">
       <h4 class="my-0 fw-normal">${products.Name}</h4>
     </div>
-    <div class="card-body bodyOfCard">
+    <div class="card-body bodyOfCard" id="${count}" onclick="{clickHandler(this)}">
       <img src="${products.ProductPicUrl}" class="img-card" />
       <div class="footer text-end">
         <p>${products.Price}$</p>
@@ -42,9 +44,11 @@ xhr.onload = function () {
 function setx(x) {
   window.test = x;
 }
+var lolo;
 //handling the click of the user by using the count to retrieve the write product then creating the new page
 function clickHandler(x) {
-  setx(x.id);
+ 
+
   let count = 0;
   let imgUrl;
   let name;
@@ -66,7 +70,13 @@ function clickHandler(x) {
 
     count++;
   });
-//creating new page for the peoduct with the values of the card been clicked
+  
+
+  
+//creating new page for the product with the values of the card been clicked
+
+
+
   window.open("./product.html", "product").document.write(`<!DOCTYPE html>
    <html lang="en">
    <head>
@@ -117,23 +127,23 @@ function clickHandler(x) {
            <div class="container" id="c">
                <div class="row" id="row-product">
                    <div class="col-lg-6 mr-2 left" >
-                       <img src="${imgUrl}">
+                       <img id=${imgUrl} class="product-img" src="${imgUrl}">
                        
                    </div>
                    <div class="col-lg-6 mr-2" id="right">
                       
-                       <p class="product-name"  id="name">${name}</p>
-                       <p class="product-description">${description}</p>                   
+                       <p class="product-name"  id="${name}">${name}</p>
+                       <p class="product-description" id="${description}">${description}</p>                   
                        <div class="card mb-4 rounded-3 shadow-sm">
                            <div class="card-header py-3">
-                              <p>Availability :<p class="availability"> ${availability}</p></p>
+                              <p>Availability :<p class="availability" id="${availability}"> ${availability}</p></p>
                            </div>
                            <div class="card-body">
-                                <p class="product-price">${price}$</p>
+                                <p class="product-price" id="${price}">${price}$</p>
                             <div class="input-group mb-3">
-                                <input type="number" class="quantity form-control " placeholder="Quanitity available: ${quantity} " aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <input type="number" class="quantity form-control" id="${quantity}" placeholder="Quanitity available: ${quantity}" aria-label="Recipient's username" aria-describedby="basic-addon2">
                             </div>
-                                <button type="button" class="btn btn-outline-secondary" onclick="{jhandler()}">Add to cart</button>
+                                <button type="button" class="btn btn-outline-secondary" id="${++index}" onclick="{clickHandler(this)}">Add to cart</button>
 
                               
                            </div>
@@ -153,13 +163,14 @@ function clickHandler(x) {
        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
        crossorigin="anonymous"
      ></script>
-     
+     <script src="./script-product.js"></script>
            
      
      
     
    </body>
-   </html>`);
+   </html>`
+   );
    
    
   
@@ -169,5 +180,4 @@ function clickHandler(x) {
 
 
 
-  
 

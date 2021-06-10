@@ -120,3 +120,59 @@ font-size: 2rem;
 .left{
     padding-top: 10%;
 }
+
+
+.r-header{
+    padding-top: 5%;
+    padding-left: 15%;
+}
+.hr-s{
+padding:1% 5%;
+    
+}
+.hr-c{
+    width:80%
+        
+    }
+.cart-img{
+   
+    height:128px ;
+    width: 128px;
+}
+#cart{
+    padding-top: 5%;
+    padding-left: 16%;
+    padding-bottom: 10%;
+    /* padding-right: 5%; */
+}
+.column-cart{
+    padding-top: 50px;
+    
+}
+.total{
+
+    text-align: right;
+    padding:7% 15%
+}
+.r-cart{
+    /* border: solid 1px; */
+    margin-bottom: 5%;
+    /* padding-right: 20%; */
+}
+#cart h1{
+    color: cyan;
+}
+.h1-c{
+    color: darkgoldenrod;
+}
+.p-c{
+    color: green;
+    font-size: 1.5rem;
+}
+.p-q{
+size: 1.5rem;
+}
+#quantity{
+/* margin-left: 3%; */
+
+}
